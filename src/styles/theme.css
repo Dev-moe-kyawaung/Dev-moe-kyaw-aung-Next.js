@@ -1,0 +1,85 @@
+/* COLORS */
+:root {
+  /* CYBERPUNK PALETTE */
+  --bg-dark: #0b0b1a;
+  --bg-card: #1a1a2e;
+  --primary: #00d9ff;
+  --accent: #ff00aa;
+  --text-light: #ffffff;
+  --text-muted: #a8b3c5;
+  --border-glow: rgba(0, 217, 255, 0.3);
+  --accent-glow: rgba(255, 0, 170, 0.4);
+
+  /* typography */
+  --font-title: "Inter", system-ui;
+  --font-body: "JetBrains Mono", monospace;
+
+  /* layout */
+  --section-padding: 4rem 2rem;
+  --max-width: 1280px;
+
+  /* dark mode */
+  --body-bg: var(--bg-dark);
+  --card-bg: var(--bg-card);
+  --text-primary: var(--text-light);
+  --accent-shadow: 0 0 15px var(--accent);
+  --primary-shadow: 0 0 15px var(--primary);
+}
+
+/* LIGHT MODE OVERRIDES */
+[data-theme="light"] {
+  --body-bg: #f0f0f9;
+  --card-bg: #ffffff;
+  --text-primary: #0b0b1a;
+  --text-muted: #666688;
+  --border-glow: rgba(0, 0, 0, 0.1);
+  --accent-glow: rgba(255, 0, 170, 0.2);
+  --primary-shadow: none;
+  --accent-shadow: none;
+}
+
+/* global reset + typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* card base */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-glow);
+  box-shadow:
+    0 0 10px rgba(0, 217, 255, 0.1),
+    0 0 20px rgba(255, 0, 170, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* buttons */
+.btn {
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+  box-shadow: var(--primary-shadow);
+}
