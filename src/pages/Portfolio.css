@@ -1,0 +1,215 @@
+/* PORTFOLIO PAGE – CYBERPUNK THEME */
+
+.page-portfolio {
+  background: var(--body-bg);
+  color: var(--text-primary);
+}
+
+/* HERO HEADER */
+.section-portfolio-hero {
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+}
+
+.section-portfolio-hero .section-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-shadow: 0 0 20px var(--primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+}
+
+.section-portfolio-hero .section-text {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* FILTERS */
+.section-filters {
+  padding: 1rem 2rem 2rem;
+  text-align: center;
+}
+
+.filters-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-glow);
+  border-radius: 24px;
+  padding: 0.5rem;
+  max-width: min(800px, 100%);
+  margin: 0 auto;
+}
+
+.filter-tag {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-tag:hover {
+  color: var(--primary);
+}
+
+.filter-tag.active {
+  background: var(--primary);
+  color: var(--bg-dark);
+  box-shadow: var(--primary-shadow);
+}
+
+/* APP GRID */
+.section-grid {
+  padding: 2rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.app-card {
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px rgba(0, 217, 255, 0.1),
+    0 0 20px rgba(255, 0, 170, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 6px 20px rgba(0, 217, 255, 0.2),
+    0 0 40px rgba(255, 0, 170, 0.2);
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.app-type {
+  font-size: 1.4rem;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.app-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.app-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.app-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(0, 217, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+}
+
+.app-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary);
+}
+
+/* EMPTY STATE */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* CTA */
+.section-cta-bottom {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgba(0, 217, 255, 0.05);
+  border-top: 1px solid var(--border-glow);
+  border-bottom: 1px solid var(--border-glow);
+}
+
+.cta-text {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* BUTTONS – reused from theme.css, but repeated here for clarity */
+.btn {
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primary);
+  box-shadow: var(--primary-shadow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-portfolio-hero {
+    padding: 4rem 1.5rem 2rem;
+  }
+  .section-portfolio-hero .section-title {
+    font-size: 2rem;
+  }
+
+  .section-grid {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-cta-bottom {
+    padding: 2rem 1.5rem;
+  }
+}
